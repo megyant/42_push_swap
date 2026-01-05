@@ -6,7 +6,7 @@
 #    By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/20 11:18:52 by mbotelho          #+#    #+#              #
-#    Updated: 2026/01/05 09:53:09 by mbotelho         ###   ########.fr        #
+#    Updated: 2026/01/05 10:00:07 by mbotelho         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,7 @@ BONUS = $(FT)lstnew$(B).c       $(FT)lstadd_front$(B).c  $(FT)lstsize$(B).c    $
         $(FT)lstadd_back$(B).c  $(FT)lstdelone$(B).c     $(FT)lstclear$(B).c   $(FT)lstiter$(B).c \
 		$(FT)lstmap$(B).c
 
-SRCS = $(PART1) $(PART2)
+SRCS = $(PART1) $(PART2) $(FT_PRINTF)
 OBJS = $(SRCS:.c=.o)
 
 BONUS_SRCS = $(BONUS)
