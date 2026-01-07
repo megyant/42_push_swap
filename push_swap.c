@@ -6,7 +6,7 @@
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 08:39:53 by mbotelho          #+#    #+#             */
-/*   Updated: 2026/01/07 21:07:31 by mbotelho         ###   ########.fr       */
+/*   Updated: 2026/01/07 21:09:20 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,4 +23,10 @@ int	main(int ac, char **av)
 		return (1);
 	else if (ac == 2)
 		argv = split(av[1], ' ');
+	if (!is_sorted(stack_a))
+	{
+		
+	}
+	free_stack(stack_a)
+	return(0);
 }
