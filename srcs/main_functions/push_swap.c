@@ -6,7 +6,7 @@
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 08:39:53 by mbotelho          #+#    #+#             */
-/*   Updated: 2026/01/08 13:37:29 by mbotelho         ###   ########.fr       */
+/*   Updated: 2026/01/08 14:47:11 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,22 +15,46 @@
 int	main(int ac, char **av)
 {
 	t_stack	*stack_a;
-	t_stack	*stack_b;
+	int		i;
+	int		n;
 	
 	stack_a = NULL;
-	stack_b = NULL;
-	if (ac == 1 || (ac == 2 && !av[1][0]))
+	i = 0;
+	if (ac < 2)
 		return (1);
 	else if (ac == 2)
-		av = split_static(av[1], ' ');
-	if (!is_sorted(stack_a))
+		stack_a = ft_filter(av);
+	else
 	{
-		/*if (stack_len(stack_a) == 2)
-		else if (stack_len(stack_a) == 3)
-			sort_three(&stack_a);
-		else
-			sort_stacks(&stack_a, &stack_b);*/
+		while (++i < ac)
+		{
+			n = ft_atoi(av[i]);
+			ft_add_back(&stack_a, ft_stack_new(n));
+		}
 	}
+	if (!stack_a || ft_checkup(stack_a))
+		ft_error();
+	if (!is_sorted(stack_a))
+		ft_sort(&stack_a);
 	free_stack(&stack_a);
 	return(0);
+}
+
+t_stack	*ft_filter(char **av)
+{
+	t_stack *a;
+	char	**filtered;
+	int		i;
+	int		n;
+
+	a = NULL;
+	i = -1;
+	filtered = ft_split(av[1], ' ');
+	while (filtered[++i])
+	{
+		n = ft_atoi(filtered[i]);
+		ft_add_back(&a, ft_stack_new(n));
+	}
+	ft_freeing(filtered);
+	return(a);
 }

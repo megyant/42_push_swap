@@ -1,30 +1,13 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   rotate.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/08 09:52:45 by mbotelho          #+#    #+#             */
-/*   Updated: 2026/01/08 14:09:29 by mbotelho         ###   ########.fr       */
+/*   Created: 2026/01/08 13:44:11 by mbotelho          #+#    #+#             */
+/*   Updated: 2026/01/08 13:44:43 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
-
-// Libraries
-# include <libft.h>
-
-// Defining stack
-
-typedef struct s_stack
-{
-	long			value;
-	long				index;
-	struct s_stack	*next;
-	struct s_stack	*previous;
-}					t_stack;
-
-#endif
-
+#include "../../includes/push_swap.h"
