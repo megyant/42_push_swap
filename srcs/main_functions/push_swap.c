@@ -6,11 +6,11 @@
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 08:39:53 by mbotelho          #+#    #+#             */
-/*   Updated: 2026/01/08 11:30:55 by mbotelho         ###   ########.fr       */
+/*   Updated: 2026/01/08 13:37:29 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/push_swap.h"
+#include "../../includes/push_swap.h"
 
 int	main(int ac, char **av)
 {
@@ -25,11 +25,11 @@ int	main(int ac, char **av)
 		av = split_static(av[1], ' ');
 	if (!is_sorted(stack_a))
 	{
-		if (stack_len(stack_a) == 2)
+		/*if (stack_len(stack_a) == 2)
 		else if (stack_len(stack_a) == 3)
 			sort_three(&stack_a);
 		else
-			sort_stacks(&stack_a, &stack_b);
+			sort_stacks(&stack_a, &stack_b);*/
 	}
 	free_stack(&stack_a);
 	return(0);
