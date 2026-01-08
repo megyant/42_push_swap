@@ -6,11 +6,11 @@
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 16:04:22 by mbotelho          #+#    #+#             */
-/*   Updated: 2025/11/07 08:27:28 by mbotelho         ###   ########.fr       */
+/*   Updated: 2026/01/08 13:25:52 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 char	*ft_strdup(const char *s)
 {

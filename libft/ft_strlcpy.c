@@ -6,11 +6,11 @@
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 11:30:14 by mbotelho          #+#    #+#             */
-/*   Updated: 2025/11/07 08:30:02 by mbotelho         ###   ########.fr       */
+/*   Updated: 2026/01/08 13:26:13 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {

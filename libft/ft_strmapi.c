@@ -6,11 +6,11 @@
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 08:41:30 by mbotelho          #+#    #+#             */
-/*   Updated: 2025/11/03 12:13:01 by mbotelho         ###   ########.fr       */
+/*   Updated: 2026/01/08 13:26:20 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {

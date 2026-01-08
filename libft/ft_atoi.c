@@ -6,11 +6,11 @@
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 12:33:23 by mbotelho          #+#    #+#             */
-/*   Updated: 2025/11/07 08:28:35 by mbotelho         ###   ########.fr       */
+/*   Updated: 2026/01/08 13:23:54 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 int	ft_atoi(const char *nptr)
 {

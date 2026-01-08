@@ -6,11 +6,11 @@
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 08:40:31 by mbotelho          #+#    #+#             */
-/*   Updated: 2025/11/04 12:11:35 by mbotelho         ###   ########.fr       */
+/*   Updated: 2026/01/08 13:24:16 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 static int	count_int(long n);
 static char	*assigning_n(int count, long n, char *str);

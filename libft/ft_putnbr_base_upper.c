@@ -6,11 +6,11 @@
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 08:49:59 by mbotelho          #+#    #+#             */
-/*   Updated: 2025/11/10 08:50:47 by mbotelho         ###   ########.fr       */
+/*   Updated: 2026/01/08 13:25:25 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../includes/libft.h"
 
 int	ft_putnbr_base_upper(long n, int base)
 {

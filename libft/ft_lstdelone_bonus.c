@@ -6,11 +6,11 @@
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 08:09:25 by mbotelho          #+#    #+#             */
-/*   Updated: 2025/11/04 12:16:26 by mbotelho         ###   ########.fr       */
+/*   Updated: 2026/01/08 13:24:28 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {

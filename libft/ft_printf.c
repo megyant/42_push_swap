@@ -6,12 +6,11 @@
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 12:33:04 by mbotelho          #+#    #+#             */
-/*   Updated: 2025/11/10 10:47:27 by mbotelho         ###   ########.fr       */
+/*   Updated: 2026/01/08 13:25:09 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
-#include <stdio.h>
+#include "../includes/libft.h"
 
 int	ft_printf(const char *format, ...)
 {

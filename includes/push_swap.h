@@ -1,27 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/21 09:39:57 by mbotelho          #+#    #+#             */
-/*   Updated: 2026/01/08 13:24:05 by mbotelho         ###   ########.fr       */
+/*   Created: 2026/01/08 09:52:45 by mbotelho          #+#    #+#             */
+/*   Updated: 2026/01/08 13:27:15 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#ifndef PUSH_SWAP_H
+# define PUSH_SWAP_H
 
-int	ft_isalpha(int c)
-{
-	if ((c >= 'a' && c <= 'z')
-		|| (c >= 'A' && c <= 'Z'))
-		return (1);
-	return (0);
-}
+// Libraries
+# include <libft.h>
+# include <limits.h>
+# include <stdbool.h>
 
-/*int	main(void)
+// Defining stack
+
+typedef struct s_stack
 {
-	printf("%d", ft_isalpha('A'))
-	return (0);
-}*/
+	int				value;
+	int				index;
+	int				action_cost;
+	bool			high_cost;
+	bool			low_cost;
+	struct s_stack	*target;
+	struct s_stack	*next;
+	struct s_stack	*previous;
+}					t_stack;
+
+#endif
+

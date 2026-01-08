@@ -6,11 +6,11 @@
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 08:48:14 by mbotelho          #+#    #+#             */
-/*   Updated: 2025/11/03 12:16:16 by mbotelho         ###   ########.fr       */
+/*   Updated: 2026/01/08 13:26:39 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 static int	is_equal(const char *set, char c);
 

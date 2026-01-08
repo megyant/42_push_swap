@@ -6,11 +6,11 @@
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 08:48:00 by mbotelho          #+#    #+#             */
-/*   Updated: 2025/11/07 09:05:47 by mbotelho         ###   ########.fr       */
+/*   Updated: 2026/01/08 13:25:46 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 static int	word_count(char const *s, char c);
 static char	*allocate_word(const char *s, char c);

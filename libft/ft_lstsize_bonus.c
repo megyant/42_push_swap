@@ -6,11 +6,11 @@
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 15:04:26 by mbotelho          #+#    #+#             */
-/*   Updated: 2025/11/04 12:14:27 by mbotelho         ###   ########.fr       */
+/*   Updated: 2026/01/08 13:24:44 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 int	ft_lstsize(t_list *lst)
 {

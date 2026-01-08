@@ -6,11 +6,11 @@
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 08:51:51 by mbotelho          #+#    #+#             */
-/*   Updated: 2025/11/10 08:52:09 by mbotelho         ###   ########.fr       */
+/*   Updated: 2026/01/08 13:25:35 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../includes/libft.h"
 
 int	ft_putnbr_unsigned(unsigned int n)
 {
