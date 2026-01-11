@@ -6,13 +6,33 @@
 #    By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/20 11:18:52 by mbotelho          #+#    #+#              #
-#    Updated: 2026/01/08 10:57:34 by mbotelho         ###   ########.fr        #
+#    Updated: 2026/01/11 16:28:38 by mbotelho         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = push_swap.a
-FT = ft_
+NAME = push_swap
+CC = cc
+FLAGS = -Wall -Werror -Wextra -I includes
+RM = rm -f
+
+# Folders
 LIB = libft
+SRC_DIR = srcs/main_functions
+MOVE_DIR = srcs/moves
+
+# Push_swap
+
+SRCS =  $(SRC_DIR)/push_swap.c \
+		$(SRC_DIR)/read_input.c \
+    	$(SRC_DIR)/error_handling.c \
+		$(SRC_DIR)/build_stack.c \
+        $(MOVE_DIR)/push.c \
+        $(MOVE_DIR)/swap.c \
+        $(MOVE_DIR)/rotate.c \
+        $(MOVE_DIR)/reverse_rotate.c
+
+# LIBFT & FT_PRINTF
+FT = ft_
 B = _bonus
 PART1 = $(LIB)/$(FT)isalpha.c          $(LIB)/$(FT)isdigit.c           $(LIB)/$(FT)isalnum.c        $(LIB)/$(FT)isascii.c \
 	    $(LIB)/$(FT)isprint.c          $(LIB)/$(FT)strlen.c            $(LIB)/$(FT)memset.c         $(LIB)/$(FT)bzero.c \
@@ -32,23 +52,28 @@ BONUS = $(LIB)/$(FT)lstnew$(B).c       $(LIB)/$(FT)lstadd_front$(B).c  $(LIB)/$(
 FT_PRINTF = $(LIB)/$(FT)putchar.c      $(LIB)/$(FT)putstr.c            $(LIB)/$(FT)printf.c         $(LIB)/$(FT)putadress.c \
 			$(LIB)/$(FT)putnbr_base.c  $(LIB)/$(FT)putnbr_base_upper.c $(LIB)/$(FT)putnbr_unsigned.c
 
-SRCS = $(PART1) $(PART2) $(BONUS) $(FT_PRINTF)
+
+
+# SRCS & OBJS
+LIBFT_SRCS = $(PART1) $(PART2) $(BONUS) $(FT_PRINTF)
+LIBFT_OBJS = $(LIBFT_SRCS:.c=.o)
+
+
 OBJS = $(SRCS:.c=.o)
 
-CC = cc
-FLAGS = -Wall -Werror -Wextra
-RM = rm -f
+# Compile
+$(NAME): $(OBJS) $(LIBFT_OBJS)
+	$(CC) $(FLAGS) $(OBJS) $(LIBFT_OBJS) -o $(NAME)
 
 .c.o:
 	$(CC) $(FLAGS) -c $< -o $(<:.c=.o)
 
-$(NAME): $(OBJS)
-	ar rc $(NAME) $(OBJS)
+# Rules
 
 all: $(NAME)
 
 clean:
-	$(RM) $(OBJS)
+	$(RM) $(OBJS) $(LIBFT_OBJS)
 
 fclean: clean
 	$(RM) $(NAME)
