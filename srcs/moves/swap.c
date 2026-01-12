@@ -6,23 +6,45 @@
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 13:44:13 by mbotelho          #+#    #+#             */
-/*   Updated: 2026/01/12 13:32:28 by mbotelho         ###   ########.fr       */
+/*   Updated: 2026/01/12 15:35:32 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include "../../includes/push_swap.h"
+#include "../../includes/push_swap.h"
 
-t_stack	swap_a(t_stack stack_a, t_stack stack_b)
+void	swap_stacks(t_stack **stack)
 {
-	
+	t_stack	*first;
+	t_stack	*second;
+
+	if (!stack || !*stack || !(*stack)->next)
+		return ;
+	first = *stack;
+	second = first->next;
+	first->next = second->next;
+	if (first->next)
+		first->next->prev = first;
+	second->next = first;
+	second->prev = NULL;
+	first->prev = second;
+	*stack = second;
 }
 
-t_stack	swap_b(t_stack stack_a, t_stack stack_b)
+void	swap_a(t_stack **stack_a)
 {
-	
+	swap_stacks(stack_a);
+	write(1, "sa\n", 3);
 }
 
-t_stack	swap_r(t_stack stack_a, t_stack stack_b)
+void	swap_b(t_stack **stack_b)
 {
-	
-}*/
+	swap_stacks(stack_b);
+	write(1, "sb\n", 3);
+}
+
+void	swap_s(t_stack **stack_a, t_stack **stack_b)
+{
+	swap_stacks(stack_a);
+	swap_stacks(stack_b);
+	write(1, "ss\n", 3);
+}

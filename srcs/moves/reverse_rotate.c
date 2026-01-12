@@ -6,28 +6,41 @@
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 13:44:07 by mbotelho          #+#    #+#             */
-/*   Updated: 2026/01/12 13:32:34 by mbotelho         ###   ########.fr       */
+/*   Updated: 2026/01/12 15:33:50 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include "../../includes/push_swap.h"
+#include "../../includes/push_swap.h"
 
-t_stack revrot(t_stack *node1, t_stack *node2)
+void	revrot(t_stack **stack)
 {
+	t_stack	*tail;
 	
+	if (!stack || !*stack || !(*stack)->next)
+		return ;
+	tail = stack_last(*stack);
+	tail->prev->next = NULL;
+	tail->next = *stack;
+	(*stack)->prev = tail;
+	tail->prev = NULL;
+	*stack = tail;
 }
 
-t_stack	revrot_a(t_stack stack_a, t_stack stack_b)
+void	revrot_a(t_stack **stack_a)
 {
-	
+	revrot(stack_a);
+	write(1, "rra\n", 4);
 }
 
-t_stack	revrot_b(t_stack stack_a, t_stack stack_b)
+void	revrot_b(t_stack **stack_b)
 {
-	
+	revrot(stack_b);
+	write(1, "rrb\n", 4);
 }
 
-t_stack	revrot_r(t_stack stack_a, t_stack stack_b)
+void	revrot_r(t_stack **stack_a, t_stack **stack_b)
 {
-	
-}*/
+	revrot(stack_a);
+	revrot(stack_b);
+	write(1, "rrr\n", 4);
+}

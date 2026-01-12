@@ -6,7 +6,7 @@
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 09:52:45 by mbotelho          #+#    #+#             */
-/*   Updated: 2026/01/12 13:35:44 by mbotelho         ###   ########.fr       */
+/*   Updated: 2026/01/12 16:18:36 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ typedef struct s_stack
 
 // Reading the input
 t_stack				*ft_filter(int ac, char **av);
+void				index_stack(t_stack	**stack);
 
 // Error handling
 int					is_valid_atoi(char *str);
@@ -39,9 +40,35 @@ void				ft_free(char **str);
 // Building stack
 t_stack				*stack_new(int value);
 t_stack				*stack_last(t_stack *lst);
-void				stack_add_back(t_stack **stack, t_stack *new);
+void				stack_add_back(t_stack **stack, t_stack *new_node);
+
+// Movements
+
+// Push
+void				push(t_stack **dest, t_stack **src);
+void				push_a(t_stack **stack_a, t_stack **stack_b);
+void				push_b(t_stack **stack_a, t_stack **stack_b);
+
+// Reverse Rotate
+void				revrot(t_stack **stack);
+void				revrot_a(t_stack **stack_a);
+void				revrot_b(t_stack **stack_b);
+void				revrot_r(t_stack **stack_a, t_stack **stack_b);
+
+// Rotate
+void				rotate(t_stack **stack);
+void				rot_a(t_stack **stack_a);
+void				rot_b(t_stack **stack_b);
+void				rot_r(t_stack **stack_a, t_stack **stack_b);
+
+// Swap
+void				swap_stacks(t_stack **stack);
+void				swap_a(t_stack **stack_a);
+void				swap_b(t_stack **stack_b);
+void				swap_s(t_stack **stack_a, t_stack **stack_b);
 
 // testing
 void				print_stack(t_stack *stack);
+void test_setup(t_stack **a, t_stack **b);
 
 #endif

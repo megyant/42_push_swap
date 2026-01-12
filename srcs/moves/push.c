@@ -6,7 +6,7 @@
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 13:35:05 by mbotelho          #+#    #+#             */
-/*   Updated: 2026/01/12 13:36:59 by mbotelho         ###   ########.fr       */
+/*   Updated: 2026/01/12 16:21:21 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,5 @@ void	push_a(t_stack **stack_a, t_stack **stack_b)
 void	push_b(t_stack **stack_a, t_stack **stack_b)
 {
 	push(stack_b, stack_a);
-	write(1, "pa\n", 3);
+	write(1, "pb\n", 3);
 }
