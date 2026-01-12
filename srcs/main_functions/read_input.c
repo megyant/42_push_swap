@@ -6,7 +6,7 @@
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/10 17:28:56 by mbotelho          #+#    #+#             */
-/*   Updated: 2026/01/12 16:13:20 by mbotelho         ###   ########.fr       */
+/*   Updated: 2026/01/12 16:56:50 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,14 +41,14 @@ t_stack	*ft_filter(int ac, char **av)
 	return (stack_a);
 }
 
-void	index_stack(t_stack	**stack)
+void	index_stack(t_stack **stack)
 {
-	t_stack	*current;
-	t_stack	*compare;
-	long	count;
+	t_stack *current;
+	t_stack *compare;
+	long count;
 
 	current = *stack;
-	while(current)
+	while (current)
 	{
 		count = 0;
 		compare = *stack;
@@ -61,5 +61,4 @@ void	index_stack(t_stack	**stack)
 		current->index = count;
 		current = current->next;
 	}
-	
 }

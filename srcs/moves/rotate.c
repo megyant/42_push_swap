@@ -6,7 +6,7 @@
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 13:44:11 by mbotelho          #+#    #+#             */
-/*   Updated: 2026/01/12 15:31:17 by mbotelho         ###   ########.fr       */
+/*   Updated: 2026/01/12 16:56:21 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	rotate(t_stack **stack)
 {
-	t_stack *tmp;
+	t_stack	*tmp;
 	t_stack	*tail;
 
 	if (!stack || !*stack || !(*stack)->next)
