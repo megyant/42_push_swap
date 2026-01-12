@@ -6,7 +6,7 @@
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/10 17:28:56 by mbotelho          #+#    #+#             */
-/*   Updated: 2026/01/11 16:21:40 by mbotelho         ###   ########.fr       */
+/*   Updated: 2026/01/12 13:35:35 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ t_stack	*ft_filter(int ac, char **av)
 	long	value;
 	t_stack	*stack_a;
 	int		i;
-	
+
 	stack_a = NULL;
 	if (ac == 2)
 		args = ft_split(av[1], ' ');

@@ -6,7 +6,7 @@
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 15:20:09 by mbotelho          #+#    #+#             */
-/*   Updated: 2026/01/11 16:29:36 by mbotelho         ###   ########.fr       */
+/*   Updated: 2026/01/12 13:36:19 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,10 @@ t_stack	*stack_last(t_stack *lst)
 		return (NULL);
 	while (lst->next)
 		lst = lst->next;
-	return (lst);	
+	return (lst);
 }
 
-void	stack_add_back(t_stack	**stack, t_stack *new_node)
+void	stack_add_back(t_stack **stack, t_stack *new_node)
 {
 	t_stack	*last_node;
 

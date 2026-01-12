@@ -6,13 +6,13 @@
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/10 17:30:57 by mbotelho          #+#    #+#             */
-/*   Updated: 2026/01/11 16:23:06 by mbotelho         ###   ########.fr       */
+/*   Updated: 2026/01/12 13:36:40 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-int is_valid_atoi(char *str)
+int	is_valid_atoi(char *str)
 {
 	int	i;
 
@@ -43,13 +43,13 @@ int	is_duplicate(t_stack *stack, int nb)
 	return (0);
 }
 
-void	free_stack(t_stack	**stack)
+void	free_stack(t_stack **stack)
 {
 	t_stack	*tmp;
 	t_stack	*current;
-	
+
 	if (!stack || !*stack)
-		return	;
+		return ;
 	current = *stack;
 	while (current)
 	{
@@ -72,7 +72,7 @@ void	ft_error(t_stack **stack, char **args, int ac)
 
 void	ft_free(char **str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (!str)
