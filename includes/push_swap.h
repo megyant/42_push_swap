@@ -6,7 +6,7 @@
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 09:52:45 by mbotelho          #+#    #+#             */
-/*   Updated: 2026/01/12 16:18:36 by mbotelho         ###   ########.fr       */
+/*   Updated: 2026/01/13 11:30:50 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 // Libraries
 # include <libft.h>
+# include <stdbool.h>
 
 // Defining stack
 
@@ -22,13 +23,16 @@ typedef struct s_stack
 {
 	long			value;
 	long			index;
+	long			position;
+	bool			upper_half;
+	struct s_stack	*target;
 	struct s_stack	*next;
 	struct s_stack	*prev;
 }					t_stack;
 
 // Reading the input
 t_stack				*ft_filter(int ac, char **av);
-void				index_stack(t_stack	**stack);
+void				index_stack(t_stack **stack);
 
 // Error handling
 int					is_valid_atoi(char *str);
@@ -41,6 +45,12 @@ void				ft_free(char **str);
 t_stack				*stack_new(int value);
 t_stack				*stack_last(t_stack *lst);
 void				stack_add_back(t_stack **stack, t_stack *new_node);
+long				stack_size(t_stack *stack);
+
+// Algorithm utils
+t_stack				*find_max(t_stack *stack);
+t_stack				*find_min(t_stack *stack);
+void				set_position(t_stack *stack);
 
 // Movements
 
@@ -69,6 +79,6 @@ void				swap_s(t_stack **stack_a, t_stack **stack_b);
 
 // testing
 void				print_stack(t_stack *stack);
-void test_setup(t_stack **a, t_stack **b);
+void				test_setup(t_stack **a, t_stack **b);
 
 #endif

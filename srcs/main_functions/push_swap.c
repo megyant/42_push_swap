@@ -6,7 +6,7 @@
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 08:39:53 by mbotelho          #+#    #+#             */
-/*   Updated: 2026/01/12 16:55:29 by mbotelho         ###   ########.fr       */
+/*   Updated: 2026/01/13 08:49:24 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int	main(int ac, char **av)
 }
 
 
-/*void	print_stack(t_stack *stack)
+void	print_stack(t_stack *stack)
 {
 	t_stack	*last;
 
@@ -102,4 +102,4 @@ void test_setup(t_stack **a, t_stack **b)
     print_stack(*b);
     
     ft_printf("--- TEST COMPLETE ---\n");
-}*/
+}

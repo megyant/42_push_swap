@@ -6,7 +6,7 @@
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 13:35:05 by mbotelho          #+#    #+#             */
-/*   Updated: 2026/01/12 16:21:21 by mbotelho         ###   ########.fr       */
+/*   Updated: 2026/01/13 08:53:29 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ void	push(t_stack **dest, t_stack **src)
 	to_push->prev = NULL;
 	if (*dest)
 		(*dest)->prev = to_push;
+	*dest = to_push;
 }
 
 void	push_a(t_stack **stack_a, t_stack **stack_b)
