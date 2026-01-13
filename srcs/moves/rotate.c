@@ -6,7 +6,7 @@
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 13:44:11 by mbotelho          #+#    #+#             */
-/*   Updated: 2026/01/12 16:56:21 by mbotelho         ###   ########.fr       */
+/*   Updated: 2026/01/13 18:09:46 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,19 +28,19 @@ void	rotate(t_stack **stack)
 	tmp->next = NULL;
 }
 
-void	rot_a(t_stack **stack_a)
+void	ra(t_stack **stack_a)
 {
 	rotate(stack_a);
 	write(1, "ra\n", 3);
 }
 
-void	rot_b(t_stack **stack_b)
+void	rb(t_stack **stack_b)
 {
 	rotate(stack_b);
 	write(1, "rb\n", 3);
 }
 
-void	rot_r(t_stack **stack_a, t_stack **stack_b)
+void	rr(t_stack **stack_a, t_stack **stack_b)
 {
 	rotate(stack_a);
 	rotate(stack_b);

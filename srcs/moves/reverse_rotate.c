@@ -6,7 +6,7 @@
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 13:44:07 by mbotelho          #+#    #+#             */
-/*   Updated: 2026/01/12 16:55:49 by mbotelho         ###   ########.fr       */
+/*   Updated: 2026/01/13 18:09:30 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,19 +26,19 @@ void	revrot(t_stack **stack)
 	*stack = tail;
 }
 
-void	revrot_a(t_stack **stack_a)
+void	rra(t_stack **stack_a)
 {
 	revrot(stack_a);
 	write(1, "rra\n", 4);
 }
 
-void	revrot_b(t_stack **stack_b)
+void	rrb(t_stack **stack_b)
 {
 	revrot(stack_b);
 	write(1, "rrb\n", 4);
 }
 
-void	revrot_r(t_stack **stack_a, t_stack **stack_b)
+void	rrr(t_stack **stack_a, t_stack **stack_b)
 {
 	revrot(stack_a);
 	revrot(stack_b);

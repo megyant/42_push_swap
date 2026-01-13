@@ -6,7 +6,7 @@
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/13 10:56:21 by mbotelho          #+#    #+#             */
-/*   Updated: 2026/01/13 13:44:20 by mbotelho         ###   ########.fr       */
+/*   Updated: 2026/01/13 20:45:00 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,4 +85,18 @@ t_stack	*get_cheapest(t_stack *stack)
 		stack = stack->next;
 	}
 	return (cheap_node);
+}
+
+void	move_between_stacks(t_stack **stack_a, t_stack **stack_b)
+{
+	t_stack	*cheap_a;
+	
+	cheap_a = get_cheapest(*stack_a);
+	if (cheap_a->upper_half && cheap_a->target->upper_half)
+		rotate_both(stack_a, stack_b, cheap_a);
+	else if (!cheap_a->upper_half && !cheap_a->target->upper_half)
+		revrot_both(stack_a, stack_b, cheap_a);
+	finish_rotation(stack_a, cheap_a, 'a');
+	finish_rotation(stack_b, cheap_a->target, 'b');
+	pb(stack_a, stack_b);
 }

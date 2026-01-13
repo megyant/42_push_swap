@@ -6,7 +6,7 @@
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 13:44:13 by mbotelho          #+#    #+#             */
-/*   Updated: 2026/01/12 16:55:57 by mbotelho         ###   ########.fr       */
+/*   Updated: 2026/01/13 18:10:02 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,19 +30,19 @@ void	swap_stacks(t_stack **stack)
 	*stack = second;
 }
 
-void	swap_a(t_stack **stack_a)
+void	sa(t_stack **stack_a)
 {
 	swap_stacks(stack_a);
 	write(1, "sa\n", 3);
 }
 
-void	swap_b(t_stack **stack_b)
+void	sb(t_stack **stack_b)
 {
 	swap_stacks(stack_b);
 	write(1, "sb\n", 3);
 }
 
-void	swap_s(t_stack **stack_a, t_stack **stack_b)
+void	ss(t_stack **stack_a, t_stack **stack_b)
 {
 	swap_stacks(stack_a);
 	swap_stacks(stack_b);

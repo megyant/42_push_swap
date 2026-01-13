@@ -6,7 +6,7 @@
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 09:52:45 by mbotelho          #+#    #+#             */
-/*   Updated: 2026/01/13 13:46:03 by mbotelho         ###   ########.fr       */
+/*   Updated: 2026/01/13 20:48:54 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,35 +54,41 @@ t_stack				*find_min(t_stack *stack);
 void				set_position(t_stack *stack);
 long				max_cost(cost1, cost2);
 
+//Algorithm utils 2
+void				finish_rotation(t_stack **stack, t_stack *top_node, char name);
+void				rotate_both(t_stack **stack_a, t_stack **stack_b, t_stack *cheapest)
+void				revrot_both(t_stack **stack_a, t_stack **stack_b, t_stack *cheapest)
+
 // Algorithm
 void				find_target_a(t_stack *stack_a, t_stack *stack_b, long closest);
 void				calculate_cost(t_stack *stack_a, t_stack *stack_b);
 t_stack				*get_cheapest(t_stack *stack);
+void				move_between_stacks(t_stack **stack_a, t_stack **stack_b);
 
 // Movements
 
 // Push
 void				push(t_stack **dest, t_stack **src);
-void				push_a(t_stack **stack_a, t_stack **stack_b);
-void				push_b(t_stack **stack_a, t_stack **stack_b);
+void				pa(t_stack **stack_a, t_stack **stack_b);
+void				pb(t_stack **stack_a, t_stack **stack_b);
 
 // Reverse Rotate
 void				revrot(t_stack **stack);
-void				revrot_a(t_stack **stack_a);
-void				revrot_b(t_stack **stack_b);
-void				revrot_r(t_stack **stack_a, t_stack **stack_b);
+void				rra(t_stack **stack_a);
+void				rrb(t_stack **stack_b);
+void				rrr(t_stack **stack_a, t_stack **stack_b);
 
 // Rotate
 void				rotate(t_stack **stack);
-void				rot_a(t_stack **stack_a);
-void				rot_b(t_stack **stack_b);
-void				rot_r(t_stack **stack_a, t_stack **stack_b);
+void				ra(t_stack **stack_a);
+void				rb(t_stack **stack_b);
+void				rr(t_stack **stack_a, t_stack **stack_b);
 
 // Swap
 void				swap_stacks(t_stack **stack);
-void				swap_a(t_stack **stack_a);
-void				swap_b(t_stack **stack_b);
-void				swap_s(t_stack **stack_a, t_stack **stack_b);
+void				sa(t_stack **stack_a);
+void				sb(t_stack **stack_b);
+void				ss(t_stack **stack_a, t_stack **stack_b);
 
 // testing
 void				print_stack(t_stack *stack);
