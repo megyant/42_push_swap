@@ -6,7 +6,7 @@
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/13 17:34:05 by mbotelho          #+#    #+#             */
-/*   Updated: 2026/01/13 20:31:16 by mbotelho         ###   ########.fr       */
+/*   Updated: 2026/01/14 11:10:46 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	revrot_both(t_stack **stack_a, t_stack **stack_b, t_stack *cheapest)
 
 void	finish_rotation(t_stack **stack, t_stack *top_node, char name)
 {
-	while(*stack != top_node)
+	while (*stack != top_node)
 	{
 		if (top_node->upper_half)
 		{
@@ -47,4 +47,17 @@ void	finish_rotation(t_stack **stack, t_stack *top_node, char name)
 				rrb(stack);
 		}
 	}
+}
+
+int	is_sorted(t_stack *stack)
+{
+	if (!stack)
+		return (1);
+	while (stack->next)
+	{
+		if (stack->value > stack->next->value)
+			return (0);
+		stack = stack->next;
+	}
+	return (1);
 }

@@ -6,7 +6,7 @@
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/13 08:56:01 by mbotelho          #+#    #+#             */
-/*   Updated: 2026/01/13 17:33:21 by mbotelho         ###   ########.fr       */
+/*   Updated: 2026/01/14 10:40:28 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ void	set_position(t_stack *stack)
 	if (!stack)
 		return ;
 	size = stack_size(stack);
-	median = size/2;
+	median = size / 2;
 	i = 0;
 	while (stack)
 	{
@@ -67,7 +67,7 @@ void	set_position(t_stack *stack)
 	}
 }
 
-long	max_cost(cost1, cost2)
+long	max_cost(long cost1, long cost2)
 {
 	if (cost1 > cost2)
 		return (cost1);

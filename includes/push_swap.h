@@ -6,7 +6,7 @@
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 09:52:45 by mbotelho          #+#    #+#             */
-/*   Updated: 2026/01/13 20:48:54 by mbotelho         ###   ########.fr       */
+/*   Updated: 2026/01/14 11:11:24 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,15 +52,20 @@ long				stack_size(t_stack *stack);
 t_stack				*find_max(t_stack *stack);
 t_stack				*find_min(t_stack *stack);
 void				set_position(t_stack *stack);
-long				max_cost(cost1, cost2);
+long				max_cost(long cost1, long cost2);
 
-//Algorithm utils 2
-void				finish_rotation(t_stack **stack, t_stack *top_node, char name);
-void				rotate_both(t_stack **stack_a, t_stack **stack_b, t_stack *cheapest)
-void				revrot_both(t_stack **stack_a, t_stack **stack_b, t_stack *cheapest)
+// Algorithm utils 2
+void				finish_rotation(t_stack **stack, t_stack *top_node,
+						char name);
+void				rotate_both(t_stack **stack_a, t_stack **stack_b,
+						t_stack *cheapest);
+void				revrot_both(t_stack **stack_a, t_stack **stack_b,
+						t_stack *cheapest);
+int					is_sorted(t_stack *stack);
 
 // Algorithm
-void				find_target_a(t_stack *stack_a, t_stack *stack_b, long closest);
+void				find_target_a(t_stack *stack_a, t_stack *stack_b);
+void				find_target_b(t_stack *stack_a, t_stack *stack_b);
 void				calculate_cost(t_stack *stack_a, t_stack *stack_b);
 t_stack				*get_cheapest(t_stack *stack);
 void				move_between_stacks(t_stack **stack_a, t_stack **stack_b);

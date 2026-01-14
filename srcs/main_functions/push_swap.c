@@ -6,7 +6,7 @@
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 08:39:53 by mbotelho          #+#    #+#             */
-/*   Updated: 2026/01/13 08:49:24 by mbotelho         ###   ########.fr       */
+/*   Updated: 2026/01/14 10:51:12 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,12 @@ int	main(int ac, char **av)
 	if (!stack_a)
 		return (0);
 
-	
+
 	test_setup(&stack_a, &stack_b);
 	free_stack(&stack_a);
 	free_stack(&stack_b);
 	return (0);
 }
-
 
 void	print_stack(t_stack *stack)
 {
@@ -60,46 +59,37 @@ void	print_stack(t_stack *stack)
 	ft_printf("\n");
 }
 
-
-void test_setup(t_stack **a, t_stack **b)
+void	test_setup(t_stack **a, t_stack **b)
 {
-	t_stack *tmp;
-    ft_printf("--- STARTING TEST ---\n");
-    
-	tmp = *a;
-    // 1. Index the stack
-    index_stack(a);
-	ft_printf("Stack A indexed.\n");
+	t_stack	*tmp;
 
-	
+	ft_printf("--- STARTING TEST ---\n");
+	tmp = *a;
+	// 1. Index the stack
+	index_stack(a);
+	ft_printf("Stack A indexed.\n");
 	while (tmp)
 	{
 		ft_printf("%d\n", tmp->index);
 		tmp = tmp->next;
 	}
 	ft_printf("Printed indexes.\n");
-
-    // 2. Move some nodes to B
-    push_b(a, b);
-    push_b(a, b);
-    ft_printf("Pushed 2 nodes to B.\n");
-
-    // 3. Perform rotations and swaps
-    rot_a(a);     // Top to bottom
-    swap_b(b);     // Swap top two in B
-    revrot_a(a);    // Bottom to top
-    ft_printf("Rotated A and Swapped B.\n");
-
-    // 4. Push back to A
-    push_a(a, b);
-    ft_printf("Pushed 1 node back to A.\n");
-
-    // 5. Final Print
-    ft_printf("\nFINAL STATE STACK A:\n");
-    print_stack(*a); // Use your existing print function
-    
-    ft_printf("\nFINAL STATE STACK B:\n");
-    print_stack(*b);
-    
-    ft_printf("--- TEST COMPLETE ---\n");
+	// 2. Move some nodes to B
+	pb(a, b);
+	pb(a, b);
+	ft_printf("Pushed 2 nodes to B.\n");
+	// 3. Perform rotations and swaps
+	ra(a);    // Top to bottom
+	sb(b);   // Swap top two in B
+	rra(a); // Bottom to top
+	ft_printf("Rotated A and Swapped B.\n");
+	// 4. Push back to A
+	pa(a, b);
+	ft_printf("Pushed 1 node back to A.\n");
+	// 5. Final Print
+	ft_printf("\nFINAL STATE STACK A:\n");
+	print_stack(*a); // Use your existing print function
+	ft_printf("\nFINAL STATE STACK B:\n");
+	print_stack(*b);
+	ft_printf("--- TEST COMPLETE ---\n");
 }

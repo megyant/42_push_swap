@@ -23,12 +23,12 @@ MOVE_DIR = srcs/moves
 # Push_swap
 
 SRCS =  $(SRC_DIR)/push_swap.c \
-		$(SRC_DIR)/read_input.c \
+	$(SRC_DIR)/read_input.c \
     	$(SRC_DIR)/error_handling.c \
-		$(SRC_DIR)/build_stack.c \
-		$(SRC_DIR)/algorithm.c \
-		$(SRC_DIR)/algorithm_utils.c \
-		$(SRC_DIR)/algorithm_utils2.c \
+	$(SRC_DIR)/build_stack.c \
+	$(SRC_DIR)/algorithm.c \
+	$(SRC_DIR)/algorithm_utils.c \
+	$(SRC_DIR)/algorithm_utils2.c \
         $(MOVE_DIR)/push.c \
         $(MOVE_DIR)/swap.c \
         $(MOVE_DIR)/rotate.c \
