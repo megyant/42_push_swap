@@ -1,5 +1,7 @@
 # Push_swap
 
+This README is not yet finalized
+
 *This project has been created as part of the 42 curriculum by <mbotelho>[mbotelho].*
 
 ## Description
@@ -25,7 +27,7 @@ Gemini was used to optimize the development workflow of this project. Some usage
 - Improve understanding of some concepts
 - Quick and small debbugg checks throgout the making of this program
 - Makefile adjustments
-- Improve this README.md wording
+- Improve this README wording
 
 All algorithm and implementation of the logic in this program are the author's own work.
 
