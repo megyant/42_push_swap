@@ -6,7 +6,7 @@
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 09:52:45 by mbotelho          #+#    #+#             */
-/*   Updated: 2026/01/14 11:11:24 by mbotelho         ###   ########.fr       */
+/*   Updated: 2026/01/14 13:28:45 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,7 @@ void				rotate_both(t_stack **stack_a, t_stack **stack_b,
 void				revrot_both(t_stack **stack_a, t_stack **stack_b,
 						t_stack *cheapest);
 int					is_sorted(t_stack *stack);
+void				sort_three(t_stack **stack_a);
 
 // Algorithm
 void				find_target_a(t_stack *stack_a, t_stack *stack_b);
@@ -69,6 +70,10 @@ void				find_target_b(t_stack *stack_a, t_stack *stack_b);
 void				calculate_cost(t_stack *stack_a, t_stack *stack_b);
 t_stack				*get_cheapest(t_stack *stack);
 void				move_between_stacks(t_stack **stack_a, t_stack **stack_b);
+
+// Algorithm2
+void				turk_sort(t_stack	**stack_a, t_stack **stack_b);
+void				sort_stack(t_stack **stack_a, t_stack **stack_b);
 
 // Movements
 

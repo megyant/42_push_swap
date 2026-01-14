@@ -6,7 +6,7 @@
 #    By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/20 11:18:52 by mbotelho          #+#    #+#              #
-#    Updated: 2026/01/13 20:40:01 by mbotelho         ###   ########.fr        #
+#    Updated: 2026/01/14 13:16:44 by mbotelho         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,12 +23,13 @@ MOVE_DIR = srcs/moves
 # Push_swap
 
 SRCS =  $(SRC_DIR)/push_swap.c \
-	$(SRC_DIR)/read_input.c \
-    	$(SRC_DIR)/error_handling.c \
-	$(SRC_DIR)/build_stack.c \
-	$(SRC_DIR)/algorithm.c \
-	$(SRC_DIR)/algorithm_utils.c \
-	$(SRC_DIR)/algorithm_utils2.c \
+		$(SRC_DIR)/read_input.c \
+		$(SRC_DIR)/error_handling.c \
+		$(SRC_DIR)/build_stack.c \
+		$(SRC_DIR)/algorithm.c \
+		$(SRC_DIR)/algorithm2.c \
+		$(SRC_DIR)/algorithm_utils.c \
+		$(SRC_DIR)/algorithm_utils2.c \
         $(MOVE_DIR)/push.c \
         $(MOVE_DIR)/swap.c \
         $(MOVE_DIR)/rotate.c \

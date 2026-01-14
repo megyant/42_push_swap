@@ -6,7 +6,7 @@
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 08:39:53 by mbotelho          #+#    #+#             */
-/*   Updated: 2026/01/14 10:51:12 by mbotelho         ###   ########.fr       */
+/*   Updated: 2026/01/14 13:30:26 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,21 +19,19 @@ int	main(int ac, char **av)
 
 	stack_a = NULL;
 	stack_b = NULL;
-	(void)stack_b;
 	if (ac < 2 || !av[1][0])
 		return (0);
 	stack_a = ft_filter(ac, av);
 	if (!stack_a)
 		return (0);
-
-
-	test_setup(&stack_a, &stack_b);
+	index_stack(&stack_a);
+	sort_stack(&stack_a, &stack_b);
 	free_stack(&stack_a);
 	free_stack(&stack_b);
 	return (0);
 }
 
-void	print_stack(t_stack *stack)
+/*void	print_stack(t_stack *stack)
 {
 	t_stack	*last;
 
@@ -92,4 +90,4 @@ void	test_setup(t_stack **a, t_stack **b)
 	ft_printf("\nFINAL STATE STACK B:\n");
 	print_stack(*b);
 	ft_printf("--- TEST COMPLETE ---\n");
-}
+}*/

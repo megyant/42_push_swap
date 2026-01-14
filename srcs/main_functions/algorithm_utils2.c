@@ -6,7 +6,7 @@
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/13 17:34:05 by mbotelho          #+#    #+#             */
-/*   Updated: 2026/01/14 11:10:46 by mbotelho         ###   ########.fr       */
+/*   Updated: 2026/01/14 14:28:22 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,4 +60,17 @@ int	is_sorted(t_stack *stack)
 		stack = stack->next;
 	}
 	return (1);
+}
+
+void	sort_three(t_stack **stack_a)
+{
+	t_stack	*max_node;
+
+	max_node = find_max(*stack_a);
+	if (*stack_a == max_node)
+		ra(stack_a);
+	if ((*stack_a)->next == max_node)
+		rra(stack_a);
+	if ((*stack_a)->value > (*stack_a)->next->value)
+		sa(stack_a);
 }

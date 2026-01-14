@@ -6,7 +6,7 @@
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/13 10:56:21 by mbotelho          #+#    #+#             */
-/*   Updated: 2026/01/14 10:44:33 by mbotelho         ###   ########.fr       */
+/*   Updated: 2026/01/14 14:27:56 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ void	find_target_b(t_stack *stack_a, t_stack *stack_b)
 {
 	t_stack	*target;
 	t_stack	*current_a;
-	long closest;
+	long	closest;
 
 	while (stack_b)
 	{
