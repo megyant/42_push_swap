@@ -23,9 +23,11 @@ Gemini was used to optimize the development workflow of this project. Some usage
 - Assist with testing the program
 - Logical improvement of functions
 - Improve understanding of some concepts
-- Quick debbugg checks throgout the making of this program
+- Quick and small debbugg checks throgout the making of this program
 - Makefile adjustments
 - Improve this README.md wording
+
+All algorithm and implementation of the logic in this program are the author's own work.
 
 ## IMPORTANT MESSAGE
 
