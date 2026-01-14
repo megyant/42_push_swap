@@ -1,6 +1,6 @@
 # 42_push_swap
   
-links:  
+srcs:  
 https://github.com/ricardoferreirax/PUSH_SWAP/blob/main/roadmap.c  
 https://www.youtube.com/watch?v=rO-JjtgpX2U&list=PLdqJJidIgFEjLfbSaqLlZr70DLgx5IFLF  
 https://github.com/f-corvaro/PUSH_SWAP  
