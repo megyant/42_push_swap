@@ -55,6 +55,27 @@ By picking the path with the fewest total instructions, the algorithm minimizes 
 
 ## Instructions
 
+Clone this repository
+```
+git clone git@github.com:megyant/42_push_swap.git push_swap
+```
+```
+cd push_swap
+```
+
+Build the executable using the provided Makefile
+```
+make
+```
+
+Run the program with a list of integers:
+```
+./push_swap 2 1 3 6 5 8
+```
+
+```
+ARG= "4 67 3 87 23"; ./push_swap $ARG
+```
 
 
 ## Resources 
