@@ -74,7 +74,7 @@ Run the program with a list of integers:
 ```
 
 ```
-ARG= "4 67 3 87 23"; ./push_swap $ARG
+ARG="4 67 3 87 23"; ./push_swap $ARG
 ```
 
 
