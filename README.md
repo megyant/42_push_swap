@@ -1,6 +1,6 @@
 # Push_swap
 
-*This project has been created as part of the 42 curriculum by <mbotelho>[mbotelho].*
+*This project has been created as part of the 42 curriculum by <mbotelho>mbotelho.*
 
 ## Description
 Push_swap is an efficient sorting utility designed to order a set of integers using two stacks and a restricted set of operations. The primary objective is to implement a sorting algorithm optimized for minimal instruction counts.  
