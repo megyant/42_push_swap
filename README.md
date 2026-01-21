@@ -3,8 +3,9 @@
 *This project has been created as part of the 42 curriculum by <mbotelho>[mbotelho].*
 
 ## Description
-Push_swap is an efficient sorting utility designed to order a set of integers using two stacks and a restricted set of operations. The primary objective is to implement a sorting algorithm optimized for minimal instruction counts.
-Algorithmic Efficiency
+Push_swap is an efficient sorting utility designed to order a set of integers using two stacks and a restricted set of operations. The primary objective is to implement a sorting algorithm optimized for minimal instruction counts.  
+  
+### Algorithmic Efficiency
 
 In computer science, algorithm efficiency is measured via Big O notation, which describes how resource consumption—both time and space—scales with input size (n). While a theoretical ideal is O(1) (constant complexity), practical sorting typically requires logarithmic or linearithmic time.
 
@@ -104,3 +105,7 @@ All algorithm and implementation of the logic in this program are the author's o
 ## IMPORTANT MESSAGE
 
 DO NOT COPY OR CHEAT, YOU WILL NOT BE HELPING YOURSELF.
+
+## Completion
+
+Finished on 21/01 with 100
