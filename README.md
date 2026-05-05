@@ -96,7 +96,7 @@ Gemini was used to optimize the development workflow of this project. Some usage
 - Assist with testing the program
 - Logical improvement of functions
 - Improve understanding of some concepts
-- Quick and small debbugg checks throgout the making of this program
+- Quick and small debug checks througout the making of this program
 - Makefile adjustments
 - Improve this README wording
 
